@@ -30,12 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="2019_RevitAPI">
-      <HintPath>..\..\..\..\2. Reference\Revit 2019 dll\2019_RevitAPI.dll</HintPath>
+    <Reference Include="2018_RevitAPI">
+      <HintPath>..\..\2018_RevitAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="2019_RevitAPIUI">
-      <HintPath>..\..\..\..\2. Reference\Revit 2019 dll\2019_RevitAPIUI.dll</HintPath>
+    <Reference Include="2018_RevitAPIUI">
+      <HintPath>..\..\2018_RevitAPIUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -66,6 +66,7 @@
     <Compile Include="Constant\ConstantValue.cs" />
     <Compile Include="Database\Dao\CategoryDao.cs" />
     <Compile Include="Database\Dao\ParameterNameDao.cs" />
+    <Compile Include="Database\Dao\TaskDao.cs" />
     <Compile Include="Database\EF\Category.cs" />
     <Compile Include="Database\EF\Element.cs" />
     <Compile Include="Database\EF\ParameterBinding.cs" />

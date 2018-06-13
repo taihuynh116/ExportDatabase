@@ -19,12 +19,17 @@
                     </DataTemplate>
                 </Setter.Value>
             </Setter>
+            <Setter Property="SelectedValuePath" Value="ID"/>
+        </Style>
+        <Style x:Key="cbbCategory" TargetType="ComboBox">
+            <Setter Property="DisplayMemberPath" Value="Name"/>
+            <Setter Property="SelectedValuePath" Value="ID"/>
         </Style>
     </Window.Resources>
     <Grid Margin="5" local:GridHelpers.RowColumnCount="3 2" local:GridHelpers.RowWidthsChanged="auto * auto">
         <Grid Grid.Column="0" Grid.Row="0" Margin="5" local:GridHelpers.RowColumnCount="1 2" Grid.ColumnSpan="2" local:GridHelpers.ColumnWidthsChanged="auto">
             <Label Grid.Column="0" Style="{StaticResource lblHeader}" Content="Category:"/>
-            <ComboBox x:Name="cbbCategory" Margin="7 0 0 0" Grid.Column="1" Width="170" SelectionChanged="cbbCategory_SelectionChanged"></ComboBox>
+            <ComboBox Style="{StaticResource cbbCategory}" x:Name="cbbCategory" Margin="7 0 0 0" Grid.Column="1" Width="170" SelectionChanged="cbbCategory_SelectionChanged"></ComboBox>
         </Grid>
         <Grid Grid.Column="0" Grid.Row="1" Margin="5" local:GridHelpers.RowColumnCount="2 1" local:GridHelpers.RowWidthsChanged="auto *">
             <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource lblHeader}" Content="Unused Parameter:"/>
@@ -36,7 +41,7 @@
         </Grid>
         <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" local:GridHelpers.RowColumnCount="2 1" local:GridHelpers.RowWidthsChanged="auto *">
             <Label Grid.Row="0" Style="{StaticResource lblHeader}" Content="Task:"/>
-            <Label Grid.Row="1" Content="alsfkj"/>
+            <Label Grid.Row="1" x:Name="lbTask" Content="alsfkj"/>
         </Grid>
     </Grid>
 </Window>

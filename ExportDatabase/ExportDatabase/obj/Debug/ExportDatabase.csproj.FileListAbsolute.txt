@@ -34,3 +34,21 @@ D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatab
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.g.resources
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csproj.CoreCompileInputs.cache
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csproj.CopyComplete
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\bin\Debug\ExportDatabase.dll.config
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\bin\Debug\ExportDatabase.dll
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\bin\Debug\ExportDatabase.pdb
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\bin\Debug\EntityFramework.dll
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\bin\Debug\EntityFramework.SqlServer.dll
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\bin\Debug\EntityFramework.xml
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\bin\Debug\EntityFramework.SqlServer.xml
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csprojAssemblyReference.cache
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\WPF\DatabaseManagement.g.cs
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase_MarkupCompile.cache
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase_MarkupCompile.lref
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\WPF\DatabaseManagement.baml
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.g.resources
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csproj.CoreCompileInputs.cache
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csproj.CopyComplete
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.dll
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.pdb
