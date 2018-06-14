@@ -1,0 +1,29 @@
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\MainWindow.g.cs
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\App.g.cs
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\bin\Debug\WpfApp1.exe.config
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\bin\Debug\WpfApp1.exe
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\bin\Debug\WpfApp1.pdb
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\MainWindow.baml
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.g.resources
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.exe
+E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\bin\Debug\WpfApp1.exe.config
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\bin\Debug\WpfApp1.exe
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\bin\Debug\WpfApp1.pdb
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\App.g.cs
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\MainWindow.baml
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.g.resources
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.exe
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp1\obj\Debug\WpfApp1.pdb
