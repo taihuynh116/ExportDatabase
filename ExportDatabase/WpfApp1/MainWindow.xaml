@@ -5,6 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Button x:Name="btn" Content="OK" Command="{Binding Path=SaveCommand}"/>
+        Title="MainWindow" Height="122" Width="259" DataContext="{Binding Source={x:Static local:DataProject.Instance}}">
+    <!--
+    <Window.DataContext>
+        <x:Static Source="DataProject.Instance"/>
+    </Window.DataContext>-->
+    <StackPanel>
+        <Button x:Name="btn" Content="OK" Command="{Binding Path=ButtonClass.SaveCommand}"/>
+        <TextBox Text="{Binding Path=Employee.EmpID}" />
+        <TextBox Text="{Binding Path=Employee.EmpName}" />
+    </StackPanel>
 </Window>

@@ -8,21 +8,14 @@ using System.Windows.Input;
 
 namespace WpfApp1
 {
-    class MyCustomClass
+    public class ButtonClass
     {
         private ICommand _saveCommand;
         public ICommand SaveCommand
         {
             get
             {
-                if (_saveCommand == null)
-                {
-                    _saveCommand = new RelayCommand(
-                        param => this.SaveObject(),
-                        param => this.CanSave()
-                        );
-                }
-                return _saveCommand;
+                return _saveCommand ?? (_saveCommand = new RelayCommand(x => this.SaveObject(), x => this.CanSave()));
             }
         }
         public bool CanSave()

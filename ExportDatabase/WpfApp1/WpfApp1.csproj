@@ -54,7 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MyCustomClass.cs" />
+    <Compile Include="ButtonClass.cs" />
+    <Compile Include="ComboBoxClass.cs" />
+    <Compile Include="DataProject.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="RelayCommand.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -16,7 +16,6 @@ D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\obj\Debug\E
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.dll
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.pdb
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csprojResolveAssemblyReference.cache
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csprojResolveAssemblyReference.cache
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\WPF\DatabaseManagement.g.cs
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase_MarkupCompile.cache
@@ -52,3 +51,4 @@ E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\Export
 E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csproj.CopyComplete
 E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.dll
 E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.pdb
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csprojResolveAssemblyReference.cache

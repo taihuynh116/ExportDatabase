@@ -23,9 +23,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-
-            MyCustomClass mcc = new MyCustomClass();
-            this.DataContext = mcc;
+            
         }
     }
 }
