@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace ExportDatabase.WPF
 {
-    public class GridHelpers
+    public class GridHelpers:DependencyObject
     {
         public static readonly DependencyProperty RowColumnCountProperty = DependencyProperty.RegisterAttached("RowColumnCount", typeof(string), typeof(GridHelpers), new PropertyMetadata("0 0", RowColumnCountChanged));
         public static string GetRowColumnCount(DependencyObject obj)
