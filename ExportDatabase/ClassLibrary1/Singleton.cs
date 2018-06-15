@@ -19,5 +19,7 @@ namespace ClassLibrary1
             }
         }
         public ObservableCollection<Person> People { get; set; }= new ObservableCollection<Person>();
+        public ListBoxClass ListBoxClass { get; set; } = new ListBoxClass();
+        public ButtonClass ButtonClass { get; set; } = new ButtonClass();
     }
 }
