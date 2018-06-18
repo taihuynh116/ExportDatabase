@@ -82,6 +82,7 @@
       <DependentUpon>DatabaseManagement.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\GridHelpers.cs" />
+    <Compile Include="WPF\Property\Base\BaseAttachedProperty.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -89,6 +90,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ProjectData\Dao\" />
+    <Folder Include="WPF\Data\Dao\" />
+    <Folder Include="WPF\Data\EF\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="WPF\DatabaseManagement.xaml">

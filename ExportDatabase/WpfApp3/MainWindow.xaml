@@ -27,7 +27,5 @@
             <TextBlock Name="textBlock2" Text="textBlock2" Style="{StaticResource debugBehavior}"/>
             <TextBlock Name="textBlock3" Text="textBlock3" Style="{StaticResource debugBehavior}"/>
         </StackPanel>
-
-        <!-- {Message} - {MessageParameter} - {AssociatedObject} - {parameter} -->
     </Grid>
 </Window>
