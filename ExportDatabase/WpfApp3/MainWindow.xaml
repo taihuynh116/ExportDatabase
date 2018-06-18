@@ -4,28 +4,41 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.Resources>
-            <sys:String x:Key="stringResouce1">abc_xyz_123</sys:String>
-            <local:Triggers x:Key="debugTriggers" x:Shared="False">
+            <local:Triggers x:Key="trigger" x:Shared="False">
                 <i:EventTrigger EventName="MouseLeftButtonDown">
-                    <local:Action Message="DataContext" MessageParameter="{Binding}"/>
-                    <local:Action Message="ElementName" MessageParameter="{Binding Text, ElementName=textBlock2}"/>
-                    <local:Action Message="Mentor" MessageParameter="{Binding Text, RelativeSource={RelativeSource AncestorType={x:Type FrameworkElement}}}"/>
+                    <local:Action Message="ABC" MessageParameter="XYZ"/>
                 </i:EventTrigger>
             </local:Triggers>
-            <Style x:Key="debugBehavior" TargetType="FrameworkElement">
-                <Setter Property="local:SupplementaryInteraction.Triggers" Value="{StaticResource debugTriggers}"/>
+            <local:Triggers x:Key="trigger_1">
+                <i:EventTrigger EventName="Click">
+                    <local:Action Message="ABsfC" MessageParameter="XYZ"/>
+                </i:EventTrigger>
+            </local:Triggers>
+            <Style x:Key="triggers" TargetType="FrameworkElement">
+                <Setter Property="local:SupplementaryInteraction.Triggers" Value="{StaticResource trigger}"/>
+            </Style>
+            <Style x:Key="btnTriggers" TargetType="Button">
+                <Setter Property="local:SupplementaryInteraction.Triggers" Value="{StaticResource trigger_1}"/>
             </Style>
         </Grid.Resources>
+<<<<<<< HEAD
         <StackPanel DataContext="{StaticResource stringResouce1}">
             <TextBlock Name="textBlock1" Text="textBlock1" Style="{StaticResource debugBehavior}"/>
             <TextBlock Name="textBlock2" Text="textBlock2" Style="{StaticResource debugBehavior}"/>
             <TextBlock Name="textBlock3" Text="textBlock3" Style="{StaticResource debugBehavior}"/>
         </StackPanel>
+=======
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Style="{StaticResource triggers}">ADAD</TextBlock>
+        <Button Grid.Row="1" Style="{StaticResource btnTriggers}">OK</Button>
+>>>>>>> 45017d56940759242902fecadf000eb0d84f4fd3
     </Grid>
 </Window>
