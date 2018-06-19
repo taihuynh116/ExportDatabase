@@ -11,10 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp5", "WpfApp5\WpfApp5.csproj", "{17DF845D-6EEE-4560-AF49-1C0AE16D7639}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{0EDD9DA7-405C-4FF0-AF2B-E4353939F302}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp6", "WpfApp6\WpfApp6.csproj", "{E5BC1C2C-1485-48A9-8036-277EF5076308}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,14 +33,6 @@ Global
 		{17DF845D-6EEE-4560-AF49-1C0AE16D7639}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17DF845D-6EEE-4560-AF49-1C0AE16D7639}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17DF845D-6EEE-4560-AF49-1C0AE16D7639}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0EDD9DA7-405C-4FF0-AF2B-E4353939F302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EDD9DA7-405C-4FF0-AF2B-E4353939F302}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EDD9DA7-405C-4FF0-AF2B-E4353939F302}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EDD9DA7-405C-4FF0-AF2B-E4353939F302}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5BC1C2C-1485-48A9-8036-277EF5076308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5BC1C2C-1485-48A9-8036-277EF5076308}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5BC1C2C-1485-48A9-8036-277EF5076308}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5BC1C2C-1485-48A9-8036-277EF5076308}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

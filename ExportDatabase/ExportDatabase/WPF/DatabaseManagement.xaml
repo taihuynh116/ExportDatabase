@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ExportDatabase.WPF"
              mc:Ignorable="d" 
-             Title="Project Database" Height="452" Width="384">
+             Title="Project Database" Height="452" Width="384" DataContext="{x:Static local:WPFDbContext.Instance}"
+         local:BaseAttachedProperty.WindowLoadedProperty="True">
+    <!--DataContext="{x:Static local:WPFDbContext.Instance}"-->
     <Window.Resources>
         <Style x:Key="lblHeader" TargetType="Label">
             <Setter Property="TextBlock.FontWeight" Value="Bold"/>
@@ -24,24 +26,28 @@
         <Style x:Key="cbbCategory" TargetType="ComboBox">
             <Setter Property="DisplayMemberPath" Value="Name"/>
             <Setter Property="SelectedValuePath" Value="ID"/>
+            <Setter Property="ItemsSource" Value="{Binding Categories}"/>
+            <!--<Setter Property="local:BaseAttachedProperty.CategorySelectionChangedProperty" Value="True"/>-->
         </Style>
     </Window.Resources>
     <Grid Margin="5" local:GridHelpers.RowColumnCount="3 2" local:GridHelpers.RowWidthsChanged="auto * auto">
-        <Grid Grid.Column="0" Grid.Row="0" Margin="5" local:GridHelpers.RowColumnCount="1 2" Grid.ColumnSpan="2" local:GridHelpers.ColumnWidthsChanged="auto">
+        <Grid Grid.Column="0" Grid.Row="0" Margin="5" local:GridHelpers.RowColumnCount="2 2" Grid.ColumnSpan="2" local:GridHelpers.ColumnWidthsChanged="auto">
             <Label Grid.Column="0" Style="{StaticResource lblHeader}" Content="Category:"/>
-            <ComboBox Style="{StaticResource cbbCategory}" x:Name="cbbCategory" Margin="7 0 0 0" Grid.Column="1" Width="170" SelectionChanged="cbbCategory_SelectionChanged"></ComboBox>
+            <ComboBox Style="{StaticResource cbbCategory}" ItemsSource="{Binding Categories}" local:BaseAttachedProperty.CategorySelectionChangedProperty="True" 
+                      x:Name="cbbCategory" Margin="7 0 0 0" Grid.Column="1" Width="170"></ComboBox>
         </Grid>
         <Grid Grid.Column="0" Grid.Row="1" Margin="5" local:GridHelpers.RowColumnCount="2 1" local:GridHelpers.RowWidthsChanged="auto *">
             <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource lblHeader}" Content="Unused Parameter:"/>
-            <ListBox Style="{StaticResource lbParameter}" x:Name="lbUnusedParameter" Grid.Column="1" Grid.Row="1"/>
+            <ListBox Style="{StaticResource lbParameter}" x:Name="lbUnusedParameter" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding UnusedParameters}"/>
         </Grid>
         <Grid Grid.Column="1" Grid.Row="1" Margin="5"  local:GridHelpers.RowColumnCount="2 1" local:GridHelpers.RowWidthsChanged="auto *">
             <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource lblHeader}" Content="Used Parameter:"/>
-            <ListBox Style="{StaticResource lbParameter}" x:Name="lbUsedParameter" Grid.Column="1" Grid.Row="1" SelectionChanged="lbUsedParameter_SelectionChanged"/>
+            <ListBox local:BaseAttachedProperty.UsedParameterSelectoinChangedProperty="True" Style="{StaticResource lbParameter}" ItemsSource="{Binding UsedParameters}"
+                     x:Name="lbUsedParameter" Grid.Column="1" Grid.Row="1"/>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" local:GridHelpers.RowColumnCount="2 1" local:GridHelpers.RowWidthsChanged="auto *">
             <Label Grid.Row="0" Style="{StaticResource lblHeader}" Content="Task:"/>
-            <Label Grid.Row="1" x:Name="lbTask" Content="alsfkj"/>
+            <Label Grid.Row="1" x:Name="lbTask" Content="{Binding CurrentTask.Name}" Height="30"/>
         </Grid>
     </Grid>
 </Window>

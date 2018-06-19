@@ -1,6 +1,7 @@
 ﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using ExportDatabase.ProjectData.EF;
 using ExportDatabase.WPF;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,8 @@ namespace ExportDatabase.Command
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            DatabaseManagement dm = new DatabaseManagement();
-            dm.ShowDialog();
-
+            Singleton.Instance.DataForm.ShowDialog();
+            
             return Result.Succeeded;
         }
     }

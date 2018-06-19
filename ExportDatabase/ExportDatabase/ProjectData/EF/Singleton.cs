@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExportDatabase.WPF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,22 @@ namespace ExportDatabase.ProjectData.EF
 {
     public class Singleton
     {
-        public Singleton instance;
-        public Singleton Instance
+        private static Singleton instance;
+        public static Singleton Instance
         {
             get
             {
                 if (instance == null) instance = new Singleton();
                 return instance;
+            }
+        }
+        private DatabaseManagement dataForm;
+        public DatabaseManagement DataForm
+        {
+            get
+            {
+                if (dataForm == null) dataForm = new DatabaseManagement();
+                return dataForm;
             }
         }
     }

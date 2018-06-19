@@ -81,8 +81,12 @@
     <Compile Include="WPF\DatabaseManagement.xaml.cs">
       <DependentUpon>DatabaseManagement.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WPF\Data\EF\WPFDbContext.cs" />
     <Compile Include="WPF\GridHelpers.cs" />
-    <Compile Include="WPF\Property\Base\BaseAttachedProperty.cs" />
+    <Compile Include="WPF\Property\CategorySelectionChangedProperty.cs" />
+    <Compile Include="WPF\Property\MessageBoxClickedProperty.cs" />
+    <Compile Include="WPF\Property\UsedParameterSelectionChangedProperty.cs" />
+    <Compile Include="WPF\Property\WindowLoadedProperty.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -91,7 +95,6 @@
   <ItemGroup>
     <Folder Include="ProjectData\Dao\" />
     <Folder Include="WPF\Data\Dao\" />
-    <Folder Include="WPF\Data\EF\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="WPF\DatabaseManagement.xaml">

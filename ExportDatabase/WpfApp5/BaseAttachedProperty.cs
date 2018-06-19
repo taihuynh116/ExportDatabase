@@ -27,7 +27,9 @@ namespace WpfApp5
         /// <summary>
         /// The attached property for this class
         /// </summary>
-        public static readonly DependencyProperty ValueProperty = DependencyProperty.RegisterAttached("Value", typeof(Property), typeof(BaseAttachedProperty<Parent, Property>), new PropertyMetadata(new PropertyChangedCallback(OnValuePropertyChanged)));
+        public static readonly DependencyProperty ValueProperty = DependencyProperty.RegisterAttached(
+            "Value", typeof(Property), typeof(BaseAttachedProperty<Parent, Property>), 
+            new PropertyMetadata(new PropertyChangedCallback(OnValuePropertyChanged)));
 
         /// <summary>
         /// The callback event when the ValueProperty is changed

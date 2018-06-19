@@ -1,28 +1,3 @@
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\WpfApp2.exe.config
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\WpfApp2.exe
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\WpfApp2.pdb
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Controls.dll
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Drawing.dll
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Effects.dll
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Interactions.dll
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Prototyping.Interactivity.dll
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Prototyping.SketchControls.dll
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.SDK.Expression.Blend.dll
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\System.Windows.Interactivity.dll
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\MainWindow.g.cs
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\App.g.cs
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\GeneratedInternalTypeHelper.g.cs
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.cache
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.lref
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\MainWindow.baml
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.g.resources
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.Properties.Resources.resources
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.csproj.GenerateResource.cache
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.csproj.CoreCompileInputs.cache
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.csproj.CopyComplete
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.exe
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.pdb
-D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.csprojResolveAssemblyReference.cache
 E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\WpfApp2.exe.config
 E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\WpfApp2.exe
 E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\WpfApp2.pdb
@@ -48,3 +23,27 @@ E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.cspro
 E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.csproj.CopyComplete
 E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.exe
 E:\Lap trinh\Revit\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.pdb
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\WpfApp2.exe.config
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\WpfApp2.exe
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\WpfApp2.pdb
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Controls.dll
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Drawing.dll
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Effects.dll
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Prototyping.Interactivity.dll
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.Expression.Prototyping.SketchControls.dll
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\Microsoft.SDK.Expression.Blend.dll
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\bin\Debug\System.Windows.Interactivity.dll
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\MainWindow.g.cs
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\App.g.cs
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.cache
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.lref
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\MainWindow.baml
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.g.resources
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.Properties.Resources.resources
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.csproj.GenerateResource.cache
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.csproj.CoreCompileInputs.cache
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.csproj.CopyComplete
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.exe
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\WpfApp2\obj\Debug\WpfApp2.pdb

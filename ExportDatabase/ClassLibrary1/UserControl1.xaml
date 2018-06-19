@@ -19,6 +19,7 @@
         </Style>
     </Window.Resources>
     <StackPanel>
+        <ComboBox ItemsSource="{Binding People}" DisplayMemberPath="Name"/>
         <ListBox x:Name="listBox" Style="{StaticResource listbox}" ItemsSource="{Binding People}">
             <ie:Interaction.Triggers>
                 <ie:EventTrigger EventName="SelectionChanged">
