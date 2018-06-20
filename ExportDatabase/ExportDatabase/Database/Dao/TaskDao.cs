@@ -23,5 +23,10 @@ namespace ExportDatabase.Database.Dao
             if (obj.Count() == 0) return null;
             return obj.First();
         }
+        public static List<Task> GetTasks()
+        {
+            db = new ProjectDbContext();
+            return db.Tasks.ToList();
+        }
     }
 }
