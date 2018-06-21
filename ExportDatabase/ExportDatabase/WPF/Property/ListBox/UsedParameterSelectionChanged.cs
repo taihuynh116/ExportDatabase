@@ -1,5 +1,6 @@
 ﻿using ExportDatabase.Database.Dao;
 using ExportDatabase.Database.EF;
+using ExportDatabase.WPF.Data.Dao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,11 +44,12 @@ namespace ExportDatabase.WPF
             if (listbox == null) return;
             if (listbox.SelectedIndex == -1)
             {
-                WPFDbContext.Instance.SelectedLabelTask = null;
+                //WPFDbContext.Instance.SelectedUsedTask = null;
             }
             else
             {
-                WPFDbContext.Instance.SelectedLabelTask = TaskDao.GetTask(TaskDao.GetId(selectedCate.ID, (int)listbox.SelectedValue));
+                WPFDbContext.Instance.SelectedUsedTask = TaskDao.GetTask(TaskDao.GetId(selectedCate.ID, (int)listbox.SelectedValue));
+                WPFDbContext.Instance.SelectedUsedTaskIndex = TaskDao.GetIndex(WPFDbContext.Instance.SelectedUsedTask);
             }
         }
     }

@@ -54,3 +54,5 @@ D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatab
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.pdb
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.Properties.Resources.resources
 D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\ExportDatabase.csproj.GenerateResource.cache
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\WPF\AddItem.g.cs
+D:\1. Work\Code Project\1. Revit Addin\ExportDatabase\ExportDatabase\ExportDatabase\obj\Debug\WPF\AddItem.baml

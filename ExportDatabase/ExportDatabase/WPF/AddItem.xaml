@@ -1,0 +1,23 @@
+﻿<Window x:Class="ExportDatabase.WPF.AddItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:ExportDatabase.WPF"
+        mc:Ignorable="d" SizeToContent="WidthAndHeight" 
+        DataContext="{x:Static local:WPFDbContext.Instance}" Title="{Binding Title}"
+        local:BaseAttachedProperty.AddItemWindowClosingProperty="True">
+    <Window.Resources>
+        <Style x:Key="btnMoveParameter" TargetType="Button">
+            <Setter Property="BorderBrush" Value="BlanchedAlmond"/>
+            <Setter Property="Background" Value="Azure"/>
+            <Setter Property="Width" Value="35"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel Orientation="Horizontal" Margin="10">
+        <Label Margin="15 0 0 0" Content="Name:"/>
+        <TextBox Margin="15 0 0 0" Width="100" VerticalAlignment="Center" TextBlock.TextAlignment="Right"/>
+        <Button Margin="15 0 15 0" Content="OK" Style="{StaticResource btnMoveParameter}"/>
+    </StackPanel>
+</Window>

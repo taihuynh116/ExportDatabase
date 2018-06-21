@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:ExportDatabase.WPF"
              mc:Ignorable="d" 
              Title="Project Database" Height="452" Width="400" DataContext="{x:Static local:WPFDbContext.Instance}"
-            local:BaseAttachedProperty.WindowLoadedProperty="True">
+             local:BaseAttachedProperty.WindowLoadedProperty="True">
     <Window.Resources>
         <Style x:Key="lblHeader" TargetType="Label">
             <Setter Property="TextBlock.FontWeight" Value="Bold"/>
@@ -26,11 +26,13 @@
             <Setter Property="DisplayMemberPath" Value="Name"/>
             <Setter Property="SelectedValuePath" Value="ID"/>
             <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="23"/>
         </Style>
         <Style x:Key="btnMoveParameter" TargetType="Button">
             <Setter Property="BorderBrush" Value="BlanchedAlmond"/>
             <Setter Property="Background" Value="Azure"/>
-            <Setter Property="Width" Value="17"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
         </Style>
     </Window.Resources>
     <Grid local:BaseAttachedProperty.GridRowColumnCountProperty="4 2" 
@@ -43,6 +45,14 @@
                       Style="{StaticResource cbb}" ItemsSource="{Binding Categories}"  
                       SelectedItem="{Binding SelectedCategory}"
                       Grid.Column="1" Margin="7 0 0 0"/>
+            <Button local:BaseAttachedProperty.AddItemClickedProperty="Category"
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/add.png"/>
+            </Button>
+            <Button  
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/delete.png"/>
+            </Button>
         </StackPanel>
         <Grid local:BaseAttachedProperty.GridRowColumnCountProperty="2 1" 
               local:BaseAttachedProperty.GridRowWidthsProperty="auto *"
@@ -65,7 +75,17 @@
                      SelectedItem="{Binding SelectedUsedParameter}"
                      x:Name="lbUsedParameter" Grid.Column="1" Grid.Row="1"/>
         </Grid>
-        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 7 0">
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button local:BaseAttachedProperty.AddItemClickedProperty="ParameterName"
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/add.png"/>
+            </Button>
+            <Button 
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/delete.png"/>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" Margin="0 0 7 0" HorizontalAlignment="Right">
             <Button local:BaseAttachedProperty.AddParametersClickedProperty="True" 
                     Style="{StaticResource btnMoveParameter}">
                 <Image Margin="1" Source="/ExportDatabase;component/Resources/next.png"/>
@@ -82,11 +102,23 @@
               Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
             <Label Style="{StaticResource lblHeader}" 
                    Content="Task:" Grid.Row="0"/>
-            <Label Content="{Binding SelectedLabelTask.Name}" Visibility="{Binding TaskLabelVisibility}"
-                   Height="30" Grid.Row="1"/>
-            <ComboBox Style="{StaticResource cbb}" ItemsSource="{Binding Tasks}" Visibility="{Binding TaskComboBoxVisibility}"
-                      SelectedItem="{Binding SelectedComboBoxTask}" SelectedIndex="0"
-                      Grid.Row="1" HorizontalAlignment="Left"/>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <ComboBox local:BaseAttachedProperty.UsedTaskSelectionChangedProperty="True" 
+                      Style="{StaticResource cbb}" ItemsSource="{Binding Tasks}" Visibility="{Binding UsedTaskVisibility}"
+                      SelectedIndex="{Binding SelectedUsedTaskIndex}"
+                      HorizontalAlignment="Left"/>
+            <ComboBox Style="{StaticResource cbb}" ItemsSource="{Binding Tasks}" Visibility="{Binding UnusedTaskVisibility}"
+                      SelectedItem="{Binding SelectedUnusedTask}" SelectedIndex="0"
+                      HorizontalAlignment="Left"/>
+                <Button  local:BaseAttachedProperty.AddItemClickedProperty="Task"
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                    <Image Margin="1" Source="/ExportDatabase;component/Resources/add.png"/>
+                </Button>
+                <Button 
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                    <Image Margin="1" Source="/ExportDatabase;component/Resources/delete.png"/>
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

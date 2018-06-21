@@ -16,6 +16,11 @@ namespace ExportDatabase.Database.Dao
             if (paraBindings.Count() == 0) return -1;
             return paraBindings.First().IDTask;
         }
+        public static int GetIndex(Task task)
+        {
+            db = new ProjectDbContext();
+            return db.Tasks.ToList().FindIndex(x => x.ID == task.ID);
+        }
         public static Task GetTask(int id)
         {
             db = new ProjectDbContext();

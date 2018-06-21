@@ -37,8 +37,8 @@ namespace ExportDatabase.WPF
 
         private static void AddParameterClicked(object sender, RoutedEventArgs e)
         {
-            if (WPFDbContext.Instance.TaskComboBoxVisibility == Visibility.Collapsed) return;
-            ParameterBindingDao.Update(WPFDbContext.Instance.SelectedComboBoxTask.ID, WPFDbContext.Instance.SelectedCategory.ID, WPFDbContext.Instance.SelectedUnusedParameter.ID);
+            if (WPFDbContext.Instance.UnusedTaskVisibility == Visibility.Collapsed) return;
+            ParameterBindingDao.Insert(WPFDbContext.Instance.SelectedUnusedTask.ID, WPFDbContext.Instance.SelectedCategory.ID, WPFDbContext.Instance.SelectedUnusedParameter.ID);
 
             WPFParameterNameDao.Update();
         }

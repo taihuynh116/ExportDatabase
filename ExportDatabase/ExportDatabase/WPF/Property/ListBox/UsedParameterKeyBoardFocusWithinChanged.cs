@@ -41,8 +41,8 @@ namespace ExportDatabase.WPF
             }
             else
             {
-                WPFDbContext.Instance.TaskComboBoxVisibility = Visibility.Collapsed;
-                WPFDbContext.Instance.TaskLabelVisibility = Visibility.Visible;
+                WPFDbContext.Instance.UnusedTaskVisibility = Visibility.Collapsed;
+                WPFDbContext.Instance.UsedTaskVisibility = Visibility.Visible;
             }
         }
     }

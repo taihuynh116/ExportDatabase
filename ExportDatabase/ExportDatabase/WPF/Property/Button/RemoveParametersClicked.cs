@@ -37,8 +37,10 @@ namespace ExportDatabase.WPF
 
         private static void RemoveParameterClicked(object sender, RoutedEventArgs e)
         {
-            if (WPFDbContext.Instance.TaskLabelVisibility == Visibility.Collapsed) return;
-            ParameterBindingDao.Remove(WPFDbContext.Instance.SelectedLabelTask.ID, WPFDbContext.Instance.SelectedCategory.ID, WPFDbContext.Instance.SelectedUsedParameter.ID);
+            if (WPFDbContext.Instance.UsedTaskVisibility == Visibility.Collapsed) return;
+            if (WPFDbContext.Instance.SelectedCategory == null || WPFDbContext.Instance.SelectedUsedParameter == null) return;
+
+            ParameterBindingDao.Remove(WPFDbContext.Instance.SelectedCategory.ID, WPFDbContext.Instance.SelectedUsedParameter.ID);
 
             WPFParameterNameDao.Update();
         }
