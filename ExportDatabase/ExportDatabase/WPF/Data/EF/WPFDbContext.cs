@@ -26,12 +26,13 @@ namespace ExportDatabase.WPF
         private Task selectedusedTask;
         public Task SelectedUsedTask { get { return selectedusedTask; } set {  selectedusedTask = value; OnPropertyChanged(); } }
         public Task SelectedUnusedTask { get; set; }
+        public int TempSelectedTaskIndex { get; set; } = -1;
         #endregion
 
         #region Category
-        public int TempSelectedCategoryIndex { get; set; } = -1;
         private Category selectedCategory;
         public Category SelectedCategory { get { return selectedCategory; }set { selectedCategory = value;  OnPropertyChanged();  } }
+        public int TempSelectedCategoryIndex { get; set; } = -1;
         #endregion
 
         #region Parameter

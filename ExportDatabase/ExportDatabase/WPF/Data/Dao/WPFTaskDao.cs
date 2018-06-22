@@ -14,5 +14,20 @@ namespace ExportDatabase.WPF
             WPFDbContext.Instance.Tasks.Clear();
             TaskDao.GetTasks().ForEach(x => WPFDbContext.Instance.Tasks.Add(x));
         }
+        public static void SaveTempSelectedIndex()
+        {
+            
+            WPFDbContext.Instance.TempSelectedTaskIndex = TaskDao.GetIndex(WPFDbContext.Instance.SelectedUnusedTask);
+        }
+        public static void GetCategoryFromTempSelectedIndex()
+        {
+            while (WPFDbContext.Instance.TempSelectedCategoryIndex > WPFDbContext.Instance.Categories.Count - 1)
+            {
+                WPFDbContext.Instance.TempSelectedCategoryIndex--;
+            }
+            int index = WPFDbContext.Instance.TempSelectedCategoryIndex;
+            WPFDbContext.Instance.SelectedCategory = CategoryDao.GetCategoryFromIndex(WPFDbContext.Instance.TempSelectedCategoryIndex);
+            var obj = WPFDbContext.Instance.SelectedCategory;
+        }
     }
 }
