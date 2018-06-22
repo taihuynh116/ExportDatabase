@@ -38,6 +38,7 @@ namespace ExportDatabase.WPF
         private static void AddParameterClicked(object sender, RoutedEventArgs e)
         {
             if (WPFDbContext.Instance.UnusedTaskVisibility == Visibility.Collapsed) return;
+            if (WPFDbContext.Instance.SelectedUnusedParameter == null) return;
             ParameterBindingDao.Insert(WPFDbContext.Instance.SelectedUnusedTask.ID, WPFDbContext.Instance.SelectedCategory.ID, WPFDbContext.Instance.SelectedUnusedParameter.ID);
 
             WPFParameterNameDao.Update();

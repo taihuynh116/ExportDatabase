@@ -37,7 +37,7 @@ namespace ExportDatabase.WPF
 
         private static void AddItemClicked(object sender, RoutedEventArgs e)
         {
-            WPFDbContext.Instance.AddItemType = (AddItemType)Enum.Parse(typeof(AddItemType), (string)(sender as DependencyObject).GetValue(AddItemClickedProperty));
+            WPFDbContext.Instance.AddItemType = (ItemTypeEnum)Enum.Parse(typeof(ItemTypeEnum), (string)(sender as DependencyObject).GetValue(AddItemClickedProperty));
 
             WPFDbContext.Instance.AddItem.ShowDialog();
         }

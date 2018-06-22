@@ -8,6 +8,8 @@
              Title="Project Database" Height="452" Width="400" DataContext="{x:Static local:WPFDbContext.Instance}"
              local:BaseAttachedProperty.WindowLoadedProperty="True">
     <Window.Resources>
+        <local:TaskToIndexConverter x:Key="task2IndexConverter"/>
+        <local:CategoryToIndexConverter x:Key="category2IndexConverter"/>
         <Style x:Key="lblHeader" TargetType="Label">
             <Setter Property="TextBlock.FontWeight" Value="Bold"/>
             <Setter Property="Padding" Value="5"/>
@@ -43,13 +45,13 @@
                        Grid.Column="0" Content="Category:"/>
             <ComboBox local:BaseAttachedProperty.CategorySelectionChangedProperty="True"
                       Style="{StaticResource cbb}" ItemsSource="{Binding Categories}"  
-                      SelectedItem="{Binding SelectedCategory}"
+                      SelectedIndex="{Binding SelectedCategory, Converter={StaticResource category2IndexConverter}}"
                       Grid.Column="1" Margin="7 0 0 0"/>
             <Button local:BaseAttachedProperty.AddItemClickedProperty="Category"
                     Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
                 <Image Margin="1" Source="/ExportDatabase;component/Resources/add.png"/>
             </Button>
-            <Button  
+            <Button local:BaseAttachedProperty.RemoveItemClickedProperty="Category"
                     Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
                 <Image Margin="1" Source="/ExportDatabase;component/Resources/delete.png"/>
             </Button>
@@ -105,7 +107,7 @@
             <StackPanel Grid.Row="1" Orientation="Horizontal">
             <ComboBox local:BaseAttachedProperty.UsedTaskSelectionChangedProperty="True" 
                       Style="{StaticResource cbb}" ItemsSource="{Binding Tasks}" Visibility="{Binding UsedTaskVisibility}"
-                      SelectedIndex="{Binding SelectedUsedTaskIndex}"
+                      SelectedIndex="{Binding SelectedUsedTask, Converter={StaticResource task2IndexConverter}}"
                       HorizontalAlignment="Left"/>
             <ComboBox Style="{StaticResource cbb}" ItemsSource="{Binding Tasks}" Visibility="{Binding UnusedTaskVisibility}"
                       SelectedItem="{Binding SelectedUnusedTask}" SelectedIndex="0"

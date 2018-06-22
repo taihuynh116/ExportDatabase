@@ -44,12 +44,11 @@ namespace ExportDatabase.WPF
             if (listbox == null) return;
             if (listbox.SelectedIndex == -1)
             {
-                //WPFDbContext.Instance.SelectedUsedTask = null;
+                WPFDbContext.Instance.SelectedUsedTask = null;
             }
             else
             {
                 WPFDbContext.Instance.SelectedUsedTask = TaskDao.GetTask(TaskDao.GetId(selectedCate.ID, (int)listbox.SelectedValue));
-                WPFDbContext.Instance.SelectedUsedTaskIndex = TaskDao.GetIndex(WPFDbContext.Instance.SelectedUsedTask);
             }
         }
     }

@@ -43,6 +43,15 @@ namespace ExportDatabase.Database.Dao
             db = new ProjectDbContext();
             var obj = db.ParameterBindings.Where(x => x.IDCategory == idCate && x.IDParameterName == idParamName);
             if (obj.Count() == 0) return;
+            obj.ToList().ForEach(x => Remove(x.ID));
+            db.SaveChanges();
+        }
+        public static void Remove(int id, ProjectDbContext db = null)
+        {
+            if (db== null) db = new ProjectDbContext();
+            var obj = db.ParameterBindings.Where(x => x.ID== id);
+            if (obj.Count() == 0) return;
+            obj.ToList().ForEach(x => ValueBindingDao.RemoveWithParameterBinding(x.ID, db));
             db.ParameterBindings.RemoveRange(obj);
             db.SaveChanges();
         }

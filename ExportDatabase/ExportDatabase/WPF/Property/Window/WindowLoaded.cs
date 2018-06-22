@@ -38,8 +38,8 @@ namespace ExportDatabase.WPF
 
         private static void WindowLoaded(object sender, RoutedEventArgs e)
         {
-            CategoryDao.GetCategories().ForEach(x=> WPFDbContext.Instance.Categories.Add(x));
-            TaskDao.GetTasks().ForEach(x => WPFDbContext.Instance.Tasks.Add(x));
+            WPFCategoryDao.GetCategories();
+            WPFTaskDao.GetTasks();
         }
     }
 }

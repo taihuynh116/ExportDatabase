@@ -5,9 +5,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:ExportDatabase.WPF"
         mc:Ignorable="d" SizeToContent="WidthAndHeight" 
-        DataContext="{x:Static local:WPFDbContext.Instance}" Title="{Binding Title}"
+        DataContext="{x:Static local:WPFDbContext.Instance}" 
         local:BaseAttachedProperty.AddItemWindowClosingProperty="True">
+    <!--Title="{Binding AddItemType, Converter={DynamicResource addItemType2TitleConverter}}"-->
     <Window.Resources>
+        <local:AddItemTypeToTitleConverter x:Key="addItemType2TitleConverter"/>
         <Style x:Key="btnMoveParameter" TargetType="Button">
             <Setter Property="BorderBrush" Value="BlanchedAlmond"/>
             <Setter Property="Background" Value="Azure"/>
@@ -15,9 +17,13 @@
             <Setter Property="Height" Value="20"/>
         </Style>
     </Window.Resources>
+    <Window.Title>
+        <Binding Path="AddItemType" Converter="{StaticResource  addItemType2TitleConverter}"/>
+    </Window.Title>
     <StackPanel Orientation="Horizontal" Margin="10">
         <Label Margin="15 0 0 0" Content="Name:"/>
-        <TextBox Margin="15 0 0 0" Width="100" VerticalAlignment="Center" TextBlock.TextAlignment="Right"/>
-        <Button Margin="15 0 15 0" Content="OK" Style="{StaticResource btnMoveParameter}"/>
+        <TextBox Margin="15 0 0 0" Width="100" VerticalAlignment="Center" TextBlock.TextAlignment="Right" Text="{Binding ItemName}"/>
+        <Button local:BaseAttachedProperty.AddItemOKClickedProperty="true" 
+                Margin="15 0 15 0" Content="OK" Style="{StaticResource btnMoveParameter}"/>
     </StackPanel>
 </Window>
