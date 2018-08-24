@@ -18,6 +18,7 @@ namespace ExportDatabase.Command
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
+            // Form xử lý
             Singleton.Instance.DataForm.ShowDialog();
 
             return Result.Succeeded;
