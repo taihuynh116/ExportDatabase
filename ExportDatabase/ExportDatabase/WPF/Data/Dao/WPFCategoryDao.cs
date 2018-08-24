@@ -24,9 +24,7 @@ namespace ExportDatabase.WPF
             {
                 WPFDbContext.Instance.TempSelectedCategoryIndex--;
             }
-            int index = WPFDbContext.Instance.TempSelectedCategoryIndex;
             WPFDbContext.Instance.SelectedCategory = CategoryDao.GetCategoryFromIndex(WPFDbContext.Instance.TempSelectedCategoryIndex);
-            var obj = WPFDbContext.Instance.SelectedCategory;
         }
     }
 }

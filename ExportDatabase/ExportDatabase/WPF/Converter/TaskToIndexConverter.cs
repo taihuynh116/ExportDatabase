@@ -19,7 +19,9 @@ namespace ExportDatabase.WPF
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            int index = (int)value;
+            if (index == -1) return null;
+            return TaskDao.GetTaskFromIndex(index);
         }
     }
 }

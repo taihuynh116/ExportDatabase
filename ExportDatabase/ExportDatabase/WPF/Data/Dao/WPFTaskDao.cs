@@ -16,18 +16,15 @@ namespace ExportDatabase.WPF
         }
         public static void SaveTempSelectedIndex()
         {
-            
             WPFDbContext.Instance.TempSelectedTaskIndex = TaskDao.GetIndex(WPFDbContext.Instance.SelectedUnusedTask);
         }
-        public static void GetCategoryFromTempSelectedIndex()
+        public static void GetTaskFromTempSelectedIndex()
         {
-            while (WPFDbContext.Instance.TempSelectedCategoryIndex > WPFDbContext.Instance.Categories.Count - 1)
+            while (WPFDbContext.Instance.TempSelectedTaskIndex > WPFDbContext.Instance.Categories.Count - 1)
             {
-                WPFDbContext.Instance.TempSelectedCategoryIndex--;
+                WPFDbContext.Instance.TempSelectedTaskIndex--;
             }
-            int index = WPFDbContext.Instance.TempSelectedCategoryIndex;
-            WPFDbContext.Instance.SelectedCategory = CategoryDao.GetCategoryFromIndex(WPFDbContext.Instance.TempSelectedCategoryIndex);
-            var obj = WPFDbContext.Instance.SelectedCategory;
+            WPFDbContext.Instance.SelectedUnusedTask = TaskDao.GetTask(WPFDbContext.Instance.TempSelectedTaskIndex);
         }
     }
 }

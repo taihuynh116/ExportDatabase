@@ -37,7 +37,6 @@ namespace ExportDatabase.WPF
 
         private static void AddItemOKClicked(object sender, RoutedEventArgs e)
         {
-            WPFDbContext.Instance.AddItem.Hide();
             switch (WPFDbContext.Instance.AddItemType)
             {
                 case ItemTypeEnum.Category:
@@ -47,11 +46,25 @@ namespace ExportDatabase.WPF
                     WPFCategoryDao.GetCategoryFromTempSelectedIndex();
                     break;
                 case ItemTypeEnum.ParameterName:
+                    if (WPFDbContext.Instance.Description.Length == 0)
+                    {
+                        MessageBox.Show("Please input description of parameter!");
+                        return;
+                    }
+
+                    ParameterNameDao.Insert(WPFDbContext.Instance.ItemName, WPFDbContext.Instance.Description);
+                    WPFParameterNameDao.Update();
                     break;
                 case ItemTypeEnum.Task:
+                    WPFTaskDao.SaveTempSelectedIndex();
+                    TaskDao.Insert(WPFDbContext.Instance.ItemName);
+                    WPFTaskDao.GetTasks();
+                    WPFTaskDao.GetTaskFromTempSelectedIndex();
                     break;
             }
             WPFDbContext.Instance.ItemName = "";
+            WPFDbContext.Instance.Description = "";
+            WPFDbContext.Instance.AddItem.Hide();
         }
     }
 }

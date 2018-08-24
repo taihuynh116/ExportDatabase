@@ -22,5 +22,25 @@ namespace ExportDatabase.Database.Dao
                 return new List<ParameterName>();
             return obj.ToList();
         }
+        public static void Insert(string paraName, string description)
+        {
+            if (paraName == null) return;
+            if (paraName.Length == 0) return;
+            db = new ProjectDbContext();
+            var obj = db.ParameterNames.Where(x => x.Name == paraName);
+            if (obj.Count() != 0) return;
+            db.ParameterNames.Add(new ParameterName { Name = paraName, Description= description, CreateDate = DateTime.Now });
+            db.SaveChanges();
+        }
+        public static void Remove(int id)
+        {
+            db = new ProjectDbContext();
+            var obj = db.ParameterNames.Where(x => x.ID == id);
+            if (obj.Count() == 0) return;
+            var paramBindings = db.ParameterBindings.Where(x => x.IDParameterName == id);
+            paramBindings.ToList().ForEach(x => ParameterBindingDao.Remove(x.ID, db));
+            db.ParameterNames.RemoveRange(obj);
+            db.SaveChanges();
+        }
     }
 }

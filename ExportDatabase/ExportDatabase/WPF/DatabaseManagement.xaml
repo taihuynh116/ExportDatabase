@@ -83,6 +83,7 @@
                 <Image Margin="1" Source="/ExportDatabase;component/Resources/add.png"/>
             </Button>
             <Button 
+                local:BaseAttachedProperty.RemoveItemClickedProperty="ParameterName"
                     Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
                 <Image Margin="1" Source="/ExportDatabase;component/Resources/delete.png"/>
             </Button>
@@ -117,6 +118,7 @@
                     <Image Margin="1" Source="/ExportDatabase;component/Resources/add.png"/>
                 </Button>
                 <Button 
+                    local:BaseAttachedProperty.RemoveItemClickedProperty="Task"
                     Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
                     <Image Margin="1" Source="/ExportDatabase;component/Resources/delete.png"/>
                 </Button>

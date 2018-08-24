@@ -47,8 +47,15 @@ namespace ExportDatabase.WPF
                     WPFCategoryDao.GetCategoryFromTempSelectedIndex();
                     break;
                 case ItemTypeEnum.ParameterName:
+                    int id = (WPFDbContext.Instance.UnusedTaskVisibility == Visibility.Collapsed) ? WPFDbContext.Instance.SelectedUsedParameter.ID : WPFDbContext.Instance.SelectedUnusedParameter.ID;
+                    ParameterNameDao.Remove(id);
+                    WPFParameterNameDao.Update();
                     break;
                 case ItemTypeEnum.Task:
+                    WPFTaskDao.SaveTempSelectedIndex();
+                    TaskDao.Remove(WPFDbContext.Instance.SelectedUnusedTask.ID);
+                    WPFTaskDao.GetTasks();
+                    WPFParameterNameDao.Update();
                     break;
             }
         }

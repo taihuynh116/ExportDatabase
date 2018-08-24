@@ -20,10 +20,16 @@
     <Window.Title>
         <Binding Path="AddItemType" Converter="{StaticResource  addItemType2TitleConverter}"/>
     </Window.Title>
-    <StackPanel Orientation="Horizontal" Margin="10">
-        <Label Margin="15 0 0 0" Content="Name:"/>
-        <TextBox Margin="15 0 0 0" Width="100" VerticalAlignment="Center" TextBlock.TextAlignment="Right" Text="{Binding ItemName}"/>
-        <Button local:BaseAttachedProperty.AddItemOKClickedProperty="true" 
+    <StackPanel Orientation="Vertical" Margin="10">
+        <StackPanel Orientation="Horizontal">
+            <Label Margin="15 0 0 0" Content="Name:"/>
+            <TextBox Margin="15 0 0 0" Width="100" VerticalAlignment="Center" TextBlock.TextAlignment="Right" Text="{Binding ItemName}"/>
+            <Button local:BaseAttachedProperty.AddItemOKClickedProperty="true" 
                 Margin="15 0 15 0" Content="OK" Style="{StaticResource btnMoveParameter}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Visibility="{Binding ShowDescription}">
+            <Label Margin="15 0 0 0" Content="Description:"/>
+            <TextBox Margin="2 0 0 0" Width="145" Height="50" VerticalAlignment="Center" TextBlock.TextAlignment="Right" Text="{Binding Description}"/>
+        </StackPanel>
     </StackPanel>
 </Window>

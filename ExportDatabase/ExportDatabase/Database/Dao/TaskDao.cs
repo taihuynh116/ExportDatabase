@@ -21,6 +21,21 @@ namespace ExportDatabase.Database.Dao
             db = new ProjectDbContext();
             return db.Tasks.ToList().FindIndex(x => x.ID == task.ID);
         }
+        public static void Insert(string taskName)
+        {
+            if (taskName == null) return;
+            if (taskName.Length == 0) return;
+            db = new ProjectDbContext();
+            var obj = db.Tasks.Where(x => x.Name == taskName);
+            if (obj.Count() != 0) return;
+            db.Tasks.Add(new Task { Name = taskName, CreateDate = DateTime.Now });
+            db.SaveChanges();
+        }
+        public static Task GetTaskFromIndex(int index)
+        {
+            db = new ProjectDbContext();
+            return db.Tasks.ToList()[index];
+        }
         public static Task GetTask(int id)
         {
             db = new ProjectDbContext();
@@ -32,6 +47,16 @@ namespace ExportDatabase.Database.Dao
         {
             db = new ProjectDbContext();
             return db.Tasks.ToList();
+        }
+        public static void Remove(int id)
+        {
+            db = new ProjectDbContext();
+            var obj = db.Tasks.Where(x => x.ID == id);
+            if (obj.Count() == 0) return;
+            var paramBindings = db.ParameterBindings.Where(x => x.IDTask == id);
+            paramBindings.ToList().ForEach(x => ParameterBindingDao.Remove(x.ID, db));
+            db.Tasks.RemoveRange(obj);
+            db.SaveChanges();
         }
     }
 }
