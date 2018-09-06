@@ -11,7 +11,7 @@ namespace ExportDatabase.Database.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Element()
         {
-            ParameterValues = new HashSet<ParameterValue>();
+            ValueBindings = new HashSet<ValueBinding>();
         }
 
         public int ID { get; set; }
@@ -25,6 +25,8 @@ namespace ExportDatabase.Database.EF
         [StringLength(200)]
         public string GUID { get; set; }
 
+        public DateTime LastUpdate { get; set; }
+
         public bool IsValidated { get; set; }
 
         public virtual Category Category { get; set; }
@@ -32,6 +34,6 @@ namespace ExportDatabase.Database.EF
         public virtual Project Project { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ParameterValue> ParameterValues { get; set; }
+        public virtual ICollection<ValueBinding> ValueBindings { get; set; }
     }
 }

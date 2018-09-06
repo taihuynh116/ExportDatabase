@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xaml" />
@@ -65,23 +66,59 @@
     <Compile Include="Command\ExportDatabase.cs" />
     <Compile Include="Constant\ConstantValue.cs" />
     <Compile Include="Database\Dao\CategoryDao.cs" />
+    <Compile Include="Database\Dao\ValueDao.cs" />
+    <Compile Include="Database\Dao\ValueBindingDao.cs" />
+    <Compile Include="Database\Dao\ParameterBindingDao.cs" />
     <Compile Include="Database\Dao\ParameterNameDao.cs" />
     <Compile Include="Database\Dao\TaskDao.cs" />
     <Compile Include="Database\EF\Category.cs" />
     <Compile Include="Database\EF\Element.cs" />
     <Compile Include="Database\EF\ParameterBinding.cs" />
     <Compile Include="Database\EF\ParameterName.cs" />
-    <Compile Include="Database\EF\ParameterValue.cs" />
     <Compile Include="Database\EF\Project.cs" />
     <Compile Include="Database\EF\ProjectDbContext.cs" />
     <Compile Include="Database\EF\sysdiagram.cs" />
     <Compile Include="Database\EF\Task.cs" />
+    <Compile Include="Database\EF\User.cs" />
+    <Compile Include="Database\EF\Value.cs" />
+    <Compile Include="Database\EF\ValueBinding.cs" />
     <Compile Include="ProjectData\EF\Singleton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\AddItem.xaml.cs">
+      <DependentUpon>AddItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\Converter\CategoryToIndexConverter.cs" />
+    <Compile Include="WPF\Converter\TaskToIndexConverter.cs" />
+    <Compile Include="WPF\Converter\AddItemTypeToTitleConverter.cs" />
     <Compile Include="WPF\DatabaseManagement.xaml.cs">
       <DependentUpon>DatabaseManagement.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WPF\GridHelpers.cs" />
+    <Compile Include="WPF\Data\Dao\WPFCategoryDao.cs" />
+    <Compile Include="WPF\Data\Dao\WPFParameterNameDao.cs" />
+    <Compile Include="WPF\Data\Dao\WPFTaskDao.cs" />
+    <Compile Include="WPF\Data\EF\ItemTypeEnum.cs" />
+    <Compile Include="WPF\Data\EF\WPFDbContext.cs" />
+    <Compile Include="WPF\Property\Button\RemoveItemClicked.cs" />
+    <Compile Include="WPF\Property\Button\DemoClicked.cs" />
+    <Compile Include="WPF\Property\Button\AddItemOKClicked.cs" />
+    <Compile Include="WPF\Property\Button\AddItemClicked.cs" />
+    <Compile Include="WPF\Property\Button\RemoveParametersClicked.cs" />
+    <Compile Include="WPF\Property\Button\AddParametersClicked.cs" />
+    <Compile Include="WPF\Property\ComboBox\UsedTaskSelectionChanged.cs" />
+    <Compile Include="WPF\Property\ComboBox\CategorySelectionChanged.cs" />
+    <Compile Include="WPF\Property\Grid\GridRowColumnCount.cs" />
+    <Compile Include="WPF\Property\Grid\GridColumnWidths.cs" />
+    <Compile Include="WPF\Property\Grid\GridRowWidths.cs" />
+    <Compile Include="WPF\Property\ListBox\UnusedParameterKeyBoardFocusWithinChanged.cs" />
+    <Compile Include="WPF\Property\ListBox\UsedParameterKeyBoardFocusWithinChanged.cs" />
+    <Compile Include="WPF\Property\ListBox\UsedParameterSelectionChanged.cs" />
+    <Compile Include="WPF\Property\Window\AddItemWindowClosing.cs" />
+    <Compile Include="WPF\Property\Window\WindowLoaded.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -91,10 +128,44 @@
     <Folder Include="ProjectData\Dao\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="WPF\AddItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WPF\DatabaseManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rewind.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\next.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\forward.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\delete.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

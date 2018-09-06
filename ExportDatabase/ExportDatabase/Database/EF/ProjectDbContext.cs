@@ -17,10 +17,12 @@ namespace ExportDatabase.Database.EF
         public virtual DbSet<Element> Elements { get; set; }
         public virtual DbSet<ParameterBinding> ParameterBindings { get; set; }
         public virtual DbSet<ParameterName> ParameterNames { get; set; }
-        public virtual DbSet<ParameterValue> ParameterValues { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Task> Tasks { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<ValueBinding> ValueBindings { get; set; }
+        public virtual DbSet<Value> Values { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -41,13 +43,13 @@ namespace ExportDatabase.Database.EF
                 .IsUnicode(false);
 
             modelBuilder.Entity<Element>()
-                .HasMany(e => e.ParameterValues)
+                .HasMany(e => e.ValueBindings)
                 .WithRequired(e => e.Element)
                 .HasForeignKey(e => e.IDElement)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ParameterBinding>()
-                .HasMany(e => e.ParameterValues)
+                .HasMany(e => e.ValueBindings)
                 .WithRequired(e => e.ParameterBinding)
                 .HasForeignKey(e => e.IDParameterBinding)
                 .WillCascadeOnDelete(false);
@@ -68,6 +70,18 @@ namespace ExportDatabase.Database.EF
                 .HasMany(e => e.ParameterBindings)
                 .WithRequired(e => e.Task)
                 .HasForeignKey(e => e.IDTask)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Values)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.IDUser)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ValueBinding>()
+                .HasMany(e => e.Values)
+                .WithRequired(e => e.ValueBinding)
+                .HasForeignKey(e => e.IDValueBinding)
                 .WillCascadeOnDelete(false);
         }
     }

@@ -11,7 +11,7 @@ namespace ExportDatabase.Database.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ParameterBinding()
         {
-            ParameterValues = new HashSet<ParameterValue>();
+            ValueBindings = new HashSet<ValueBinding>();
         }
 
         public int ID { get; set; }
@@ -31,6 +31,6 @@ namespace ExportDatabase.Database.EF
         public virtual Task Task { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ParameterValue> ParameterValues { get; set; }
+        public virtual ICollection<ValueBinding> ValueBindings { get; set; }
     }
 }

@@ -5,8 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ExportDatabase.WPF"
              mc:Ignorable="d" 
-             Title="Project Database" Height="452" Width="384">
+             Title="Project Database" Height="452" Width="400" DataContext="{x:Static local:WPFDbContext.Instance}"
+             local:BaseAttachedProperty.WindowLoadedProperty="True">
     <Window.Resources>
+        <local:TaskToIndexConverter x:Key="task2IndexConverter"/>
+        <local:CategoryToIndexConverter x:Key="category2IndexConverter"/>
         <Style x:Key="lblHeader" TargetType="Label">
             <Setter Property="TextBlock.FontWeight" Value="Bold"/>
             <Setter Property="Padding" Value="5"/>
@@ -21,27 +24,105 @@
             </Setter>
             <Setter Property="SelectedValuePath" Value="ID"/>
         </Style>
-        <Style x:Key="cbbCategory" TargetType="ComboBox">
+        <Style x:Key="cbb" TargetType="ComboBox">
             <Setter Property="DisplayMemberPath" Value="Name"/>
             <Setter Property="SelectedValuePath" Value="ID"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="23"/>
+        </Style>
+        <Style x:Key="btnMoveParameter" TargetType="Button">
+            <Setter Property="BorderBrush" Value="BlanchedAlmond"/>
+            <Setter Property="Background" Value="Azure"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
         </Style>
     </Window.Resources>
-    <Grid Margin="5" local:GridHelpers.RowColumnCount="3 2" local:GridHelpers.RowWidthsChanged="auto * auto">
-        <Grid Grid.Column="0" Grid.Row="0" Margin="5" local:GridHelpers.RowColumnCount="1 2" Grid.ColumnSpan="2" local:GridHelpers.ColumnWidthsChanged="auto">
-            <Label Grid.Column="0" Style="{StaticResource lblHeader}" Content="Category:"/>
-            <ComboBox Style="{StaticResource cbbCategory}" x:Name="cbbCategory" Margin="7 0 0 0" Grid.Column="1" Width="170" SelectionChanged="cbbCategory_SelectionChanged"></ComboBox>
+    <Grid local:BaseAttachedProperty.GridRowColumnCountProperty="4 2" 
+          local:BaseAttachedProperty.GridRowWidthsProperty="auto * auto" 
+          Margin="5">
+        <StackPanel Orientation="Horizontal" Margin="5" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Label Style="{StaticResource lblHeader}" 
+                       Grid.Column="0" Content="Category:"/>
+            <ComboBox local:BaseAttachedProperty.CategorySelectionChangedProperty="True"
+                      Style="{StaticResource cbb}" ItemsSource="{Binding Categories}"  
+                      SelectedIndex="{Binding SelectedCategory, Converter={StaticResource category2IndexConverter}}"
+                      Grid.Column="1" Margin="7 0 0 0"/>
+            <Button local:BaseAttachedProperty.AddItemClickedProperty="Category"
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/add.png"/>
+            </Button>
+            <Button local:BaseAttachedProperty.RemoveItemClickedProperty="Category"
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/delete.png"/>
+            </Button>
+        </StackPanel>
+        <Grid local:BaseAttachedProperty.GridRowColumnCountProperty="2 1" 
+              local:BaseAttachedProperty.GridRowWidthsProperty="auto *"
+              Grid.Column="0" Grid.Row="1" Margin="5">
+            <Label Style="{StaticResource lblHeader}" 
+                   Grid.Column="0" Grid.Row="0"  Content="Unused Parameter:"/>
+            <ListBox local:BaseAttachedProperty.UnusedParameterKeyBoardFocusWithinChangedProperty="True" 
+                     Style="{StaticResource lbParameter}" ItemsSource="{Binding UnusedParameters}"
+                     SelectedItem="{Binding SelectedUnusedParameter}"
+                     Grid.Column="1" Grid.Row="1"/>
         </Grid>
-        <Grid Grid.Column="0" Grid.Row="1" Margin="5" local:GridHelpers.RowColumnCount="2 1" local:GridHelpers.RowWidthsChanged="auto *">
-            <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource lblHeader}" Content="Unused Parameter:"/>
-            <ListBox Style="{StaticResource lbParameter}" x:Name="lbUnusedParameter" Grid.Column="1" Grid.Row="1"/>
+        <Grid local:BaseAttachedProperty.GridRowColumnCountProperty="2 1" 
+              local:BaseAttachedProperty.GridRowWidthsProperty="auto *"
+              Grid.Column="1" Grid.Row="1" Margin="5">
+            <Label Style="{StaticResource lblHeader}" 
+                   Grid.Column="0" Grid.Row="0" Content="Used Parameter:"/>
+            <ListBox local:BaseAttachedProperty.UsedParameterSelectoinChangedProperty="True" 
+                     local:BaseAttachedProperty.UsedParameterKeyBoardFocusWithinChangedProperty="True"
+                     Style="{StaticResource lbParameter}" ItemsSource="{Binding UsedParameters}"
+                     SelectedItem="{Binding SelectedUsedParameter}"
+                     x:Name="lbUsedParameter" Grid.Column="1" Grid.Row="1"/>
         </Grid>
-        <Grid Grid.Column="1" Grid.Row="1" Margin="5"  local:GridHelpers.RowColumnCount="2 1" local:GridHelpers.RowWidthsChanged="auto *">
-            <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource lblHeader}" Content="Used Parameter:"/>
-            <ListBox Style="{StaticResource lbParameter}" x:Name="lbUsedParameter" Grid.Column="1" Grid.Row="1" SelectionChanged="lbUsedParameter_SelectionChanged"/>
-        </Grid>
-        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" local:GridHelpers.RowColumnCount="2 1" local:GridHelpers.RowWidthsChanged="auto *">
-            <Label Grid.Row="0" Style="{StaticResource lblHeader}" Content="Task:"/>
-            <Label Grid.Row="1" x:Name="lbTask" Content="alsfkj"/>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button local:BaseAttachedProperty.AddItemClickedProperty="ParameterName"
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/add.png"/>
+            </Button>
+            <Button 
+                local:BaseAttachedProperty.RemoveItemClickedProperty="ParameterName"
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/delete.png"/>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" Margin="0 0 7 0" HorizontalAlignment="Right">
+            <Button local:BaseAttachedProperty.AddParametersClickedProperty="True" 
+                    Style="{StaticResource btnMoveParameter}">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/next.png"/>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="7 0 0 0">
+            <Button local:BaseAttachedProperty.RemoveParametersClickedProperty="True" 
+                    Style="{StaticResource btnMoveParameter}">
+                <Image Margin="1" Source="/ExportDatabase;component/Resources/back.png"/>
+            </Button>
+        </StackPanel>
+        <Grid local:BaseAttachedProperty.GridRowColumnCountProperty="2 1" 
+              local:BaseAttachedProperty.GridRowWidthsProperty="auto *"
+              Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Style="{StaticResource lblHeader}" 
+                   Content="Task:" Grid.Row="0"/>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <ComboBox local:BaseAttachedProperty.UsedTaskSelectionChangedProperty="True" 
+                      Style="{StaticResource cbb}" ItemsSource="{Binding Tasks}" Visibility="{Binding UsedTaskVisibility}"
+                      SelectedIndex="{Binding SelectedUsedTask, Converter={StaticResource task2IndexConverter}}"
+                      HorizontalAlignment="Left"/>
+            <ComboBox Style="{StaticResource cbb}" ItemsSource="{Binding Tasks}" Visibility="{Binding UnusedTaskVisibility}"
+                      SelectedItem="{Binding SelectedUnusedTask}" SelectedIndex="0"
+                      HorizontalAlignment="Left"/>
+                <Button  local:BaseAttachedProperty.AddItemClickedProperty="Task"
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                    <Image Margin="1" Source="/ExportDatabase;component/Resources/add.png"/>
+                </Button>
+                <Button 
+                    local:BaseAttachedProperty.RemoveItemClickedProperty="Task"
+                    Style="{StaticResource btnMoveParameter}" Margin="4 0 0 0">
+                    <Image Margin="1" Source="/ExportDatabase;component/Resources/delete.png"/>
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

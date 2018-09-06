@@ -18,7 +18,7 @@ namespace ExportDatabase.Command
             Transaction tx = new Transaction(doc, "Export Database");
             tx.Start();
 
-
+            TaskDialog.Show("Revit", "Show");
 
             tx.Commit();
             return Result.Succeeded;
